@@ -6,7 +6,7 @@ const sass = require('gulp-sass');
 const path = {
     html: ['*.html', '_includes/*.html', '_layouts/*.html'],
     scss: 'scss/**/*.scss'
-}
+};
 
 gulp.task('jekyll:build', ['sass'], function(done) {
     exec('jekyll build', function(error, stdout, stderr) {
