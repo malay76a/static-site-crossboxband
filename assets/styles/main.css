@@ -1,14 +1,1 @@
-* {
-  box-sizing: border-box; }
-
-html {
-  background-color: orange;
-  height: 100%; }
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column; }
-
-.main {
-  flex-grow: 1; }
+*{box-sizing:border-box}html{background-color:orange;height:100%}body{min-height:100%;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column}.main{-ms-flex-positive:1;flex-grow:1}

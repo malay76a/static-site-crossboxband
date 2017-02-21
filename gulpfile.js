@@ -2,6 +2,8 @@ const gulp = require('gulp');
 const exec = require('child_process').exec;
 const bs = require('browser-sync').create();
 const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const cssnano = require('gulp-cssnano');
 
 const path = {
     html: ['*.html', '_includes/*.html', '_layouts/*.html'],
@@ -31,6 +33,11 @@ gulp.task('browser-sync', ['jekyll:build'], function(){
 gulp.task('sass', function(){
     return gulp.src('scss/main.scss')
         .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(cssnano())
         .pipe(gulp.dest('_site/assets/styles/'))
         .pipe(bs.stream())
         .pipe(gulp.dest('assets/styles'));
@@ -39,6 +46,11 @@ gulp.task('sass', function(){
 gulp.task('sass-lib', function(){
     return gulp.src('scss/lib.scss')
         .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(cssnano())
         .pipe(gulp.dest('_site/assets/styles/'))
         .pipe(bs.stream())
         .pipe(gulp.dest('assets/styles'));
