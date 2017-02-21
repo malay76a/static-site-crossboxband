@@ -1,0 +1,123 @@
+//Fonts
+$font-family: sans-serif;
+$line-height: 1.3;
+//Colors
+$font-color: #333333;
+$brand-color: #ffcd00;
+$additional-color: #005ea8;
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: $font-family;
+    line-height: $line-height;
+    color: $font-color;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+@function em($size, $base:16px) {
+    $remSize: $size / $base;
+    @return $remSize * 1em;
+}
+
+@mixin center($w, $h) {
+    position: absolute;
+    width: em($w);
+    height: em($h);
+    top: 50%;
+    left: 50%;
+    margin-top: em(-$h/2);
+    margin-left: em(-$w/2);
+}
+
+%fullsize {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+%justify {
+    text-align: justify;
+    text-justify: distribute;
+    line-height: 1;
+    margin-bottom: -1em;
+    &>* {
+        display: inline-block;
+        position: relative;
+        text-align: left;
+        vertical-align: top;
+    }
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+@mixin ifmobile {
+    @media only screen and (max-width: 960px) {
+        @content;
+    }
+}
+
+@mixin ifdesktop {
+    @media only screen and (min-width: 961px) {
+        @content;
+    }
+}
+
+@mixin respondH($media) {
+    @media only screen and (min-height: $media) {
+        @content;
+    }
+}
+
+@mixin respond($media) {
+    @media only screen and (max-width: $media) {
+        @content;
+    }
+}
+
+@mixin respondFrom($media) {
+    @media only screen and (min-width: $media) {
+        @content;
+    }
+}
+
+@mixin ifparent($selector) {
+    #{$selector} & {
+        @content;
+    }
+}
+
+@mixin nobr() {
+    & br {
+        content: ' ';
+    }
+    & br:after {
+        content: ' ';
+    }
+}
+
+.is_no-transition {
+    transition: none !important;
+}
+
+nobr {
+    white-space: nowrap;
+}

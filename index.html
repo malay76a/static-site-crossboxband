@@ -2,12 +2,6 @@
 layout: default
 title: Кроссфит Челябинск | Crossbox Band
 ---
-<!--begin навигация и логотип-->
-<div class="header">
-  <div class="logo">лого где нить удачно</div>
-  <div class="nav">навигация по странице</div>
-</div>
-<!--end навигация и логотип-->
 
 <!--begin фон для первого блока-->
 <div class="hero">
@@ -26,8 +20,7 @@ title: Кроссфит Челябинск | Crossbox Band
   <li>
     <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     <p>
-      {{ "/assets/style.css" | relative_url }}<br>
-      {{ "/assets/style.css" | absolute_url }}<br>
+      {{ post.content }}
     </p>
   </li>
   {% endfor %}

@@ -1,18 +1,6 @@
-* {
-    box-sizing: border-box;
-}
-
-html {
-    background-color: orange;
-    height: 100%;
-}
-
-body {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.main {
-    flex-grow: 1;
-}
+@import "core/core";
+@import "core/fonts";
+@import "blocks/header";
+@import "blocks/header-nav";
+@import "blocks/logo";
+@import "blocks/container";
