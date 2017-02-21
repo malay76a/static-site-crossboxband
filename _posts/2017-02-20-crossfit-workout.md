@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Тренировка 2017-02-20
+title: Тренировка 2017-02-20 | Crossbox Band
 ---
 
 Связка со стоек: 

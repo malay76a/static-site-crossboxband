@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Тренировка 2017-01-26
+title: Тренировка 2017-01-26 | Crossbox Band
 ---
 
 Жим стоя со стоек

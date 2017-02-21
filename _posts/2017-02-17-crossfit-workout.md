@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Тренировка 2017-02-17
+title: Тренировка 2017-02-17 | Crossbox Band
 ---
 
 Емом 16 мин

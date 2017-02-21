@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Тренировка 2017-01-19
+title: Тренировка 2017-01-19 | Crossbox Band
 ---
 
 5 серий каждые 2 мин 

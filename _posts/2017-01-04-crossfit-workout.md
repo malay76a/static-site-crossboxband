@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Тренировка 2017-01-04
+title: Тренировка 2017-01-04 | Crossbox Band
 ---
 
 Техника: рывок

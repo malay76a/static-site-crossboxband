@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Тренировка 2017-01-20
+title: Тренировка 2017-01-20 | Crossbox Band
 ---
 
 Присед на спине 

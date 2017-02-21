@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Тренировка 2017-02-21
+title: Тренировка 2017-02-21 | Crossbox Band
 ---
 <iframe src="//vk.com/video_ext.php?oid=-100377208&id=456239046&hash=82c4ab834d558a3a&sd" width="426" height="240" frameborder="0" allowfullscreen></iframe>
 

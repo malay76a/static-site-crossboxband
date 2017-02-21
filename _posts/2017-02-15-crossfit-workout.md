@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Тренировка 2017-02-15
+title: Тренировка 2017-02-15 | Crossbox Band
 ---
 
 Жим стоя
