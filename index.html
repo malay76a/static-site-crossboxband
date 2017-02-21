@@ -24,7 +24,11 @@ title: Crossbox Band | Кроссфит Челябинск
 <ul>
   {% for post in site.posts %}
   <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    <p>
+      {{ "/assets/style.css" | relative_url }}<br>
+      {{ "/assets/style.css" | absolute_url }}
+    </p>
   </li>
   {% endfor %}
 </ul>
