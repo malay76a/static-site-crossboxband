@@ -14,8 +14,50 @@ $additional-color: #005ea8;
 //     height: 100%;
 // }
 
+@mixin ifmobile {
+    @media only screen and (max-width: 960px) {
+        @content;
+    }
+}
+
+@mixin ifdesktop {
+    @media only screen and (min-width: 961px) {
+        @content;
+    }
+}
+
+@mixin respondH($media) {
+    @media only screen and (min-height: $media) {
+        @content;
+    }
+}
+
+@mixin respond($media) {
+    @media only screen and (max-width: $media) {
+        @content;
+    }
+}
+
+@mixin respondFrom($media) {
+    @media only screen and (min-width: $media) {
+        @content;
+    }
+}
+
 html {
     font-size: 16px;
+
+    @include respondFrom(1920px) {
+        font-size: (16/1920*100vw);
+    }
+
+    @include respond(1430px) {
+        font-size: (16/1430*100vw);
+    }
+
+    // @include respond(960px) {
+    //     font-size: (16/960*100vw);
+    // }
 }
 
 body {
@@ -69,35 +111,7 @@ body {
     }
 }
 
-@mixin ifmobile {
-    @media only screen and (max-width: 960px) {
-        @content;
-    }
-}
 
-@mixin ifdesktop {
-    @media only screen and (min-width: 961px) {
-        @content;
-    }
-}
-
-@mixin respondH($media) {
-    @media only screen and (min-height: $media) {
-        @content;
-    }
-}
-
-@mixin respond($media) {
-    @media only screen and (max-width: $media) {
-        @content;
-    }
-}
-
-@mixin respondFrom($media) {
-    @media only screen and (min-width: $media) {
-        @content;
-    }
-}
 
 @mixin ifparent($selector) {
     #{$selector} & {
