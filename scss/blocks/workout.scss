@@ -1,0 +1,75 @@
+.workout {
+    display: flex;
+    justify-content: center;
+    background-image: url('/assets/images/bgi.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    &__mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    &__container {
+        padding-top: 7em;
+        padding-bottom: 3em;
+        display: flex;
+        color: #fff;
+        z-index: 2;
+    }
+    &__item {
+        width: 30em;
+        padding-left: 1em;
+        padding-right: 1em;
+        border-right: 1px solid #fff;
+        &:nth-last-of-type(1) {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        &_skill {
+
+        }
+
+        &_complex {
+
+        }
+
+        &_extra-work {
+            
+        }
+    }
+    &__title {
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        left: 0;
+        top: 0.5em;
+        font-size: 1.6em;
+
+        h2 {
+            margin: 0;
+        }
+
+        &:hover {
+            color: $brand-color;
+        }
+    }
+
+    &__archive {
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        right: 0;
+        top: 1.3em;
+        font-size: 1.6em;
+        &:hover {
+            color: $brand-color;
+        }
+    }
+}
