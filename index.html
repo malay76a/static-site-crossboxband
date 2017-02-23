@@ -9,8 +9,7 @@ title: Кроссфит Челябинск | Crossbox Band
   <video class="hero__video" loop muted autoplay poster="images/">
     <source src="assets/video/promo_crossboxband.webm" type="video/webm">
     <source src="assets/video/promo_crossboxband.mp4" type="video/mp4">
-    <source src="assets/video/promo_crossboxband.ogv" type="video/ogg">
-    Your browser does not support the video tag.
+    <source src="assets/video/promo_crossboxband.ogv" type="video/ogg"> Your browser does not support the video tag.
   </video>
   <div class="hero__container content">
     <h2>Делаем Россию <b>СИЛЬНОЙ</b></h2>
@@ -22,24 +21,24 @@ title: Кроссфит Челябинск | Crossbox Band
 <div class="intro">
   <div class="container intro__container">
     <h1 class="intro__title">Добро пожаловать в Crossbox Band</h1>
-    <p class="intro__text">Только представьте:<br><br>
-Вы приходите в зал, в котором чувствуете себя как дома, светлое помещение с большими окнами, уютные раздевалки, в колонках играет ваша любимая музыка, новое качественное оборудование, приветливый персонал, профессиональные тренеры, удобное расписание, полезный бар, множество совместных уикендов и мероприятий...<br><br>
-Все это вас ждет в Crossbox Band!</p>
+    <p class="intro__text">Только представьте:<br><br> Вы приходите в зал, в котором чувствуете себя как дома, светлое помещение с большими окнами,
+      уютные раздевалки, в колонках играет ваша любимая музыка, новое качественное оборудование, приветливый персонал, профессиональные
+      тренеры, удобное расписание, полезный бар, множество совместных уикендов и мероприятий...<br><br> Все это вас ждет
+      в Crossbox Band!</p>
   </div>
 </div>
 
-<!--begin тренировка дня-->
+<div class="workout">
+  <div class="workout__mask"></div>
+  <div class="container workout__container">
+    {% for workout in site.categories.workout limit:1 %}
 
-  {% for workout in site.categories.workout limit:1 %}
-
-    <a href="{{ site.baseurl }}{{ workout.url }}">{{ workout.title }}</a>
-    <p>
+    <a class="workout__title" href="{{ site.baseurl }}{{ workout.url }}"><h2>Тренировка</h2>{{ workout.date | date: "%d/%m/%Y" }}</a>
+    
       {{ workout.content }}
-    </p>
+    
 
-  {% endfor %}
-<a href="/workout">архив тренировок</a>
-<!--end тренировка дня-->
-
-
-
+    {% endfor %}
+    <a class="workout__archive" href="/workout">архив тренировок</a>
+  </div>
+</div>
