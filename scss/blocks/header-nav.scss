@@ -1,21 +1,19 @@
 .header-nav {
-  display: flex;
-  font-size: 1.5em;
-
-  &__item {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left:.5em;
-    padding-right:.5em;
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 0.2em solid transparent;
-    text-transform: uppercase;
-
-    &:hover {
-      color: $brand-color;
-      border-bottom: 0.2em solid $brand-color;
+    display: flex;
+    font-size: 1.5em;
+    &__item {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: .5em;
+        padding-right: .5em;
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 0.2em solid transparent;
+        text-transform: uppercase;
+        padding-top: 0.5em;
+        &:hover {
+            color: $brand-color;
+            border-bottom: 0.2em solid $brand-color;
+        }
     }
-  }
-
 }

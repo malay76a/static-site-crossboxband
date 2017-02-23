@@ -2,4 +2,17 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    &__container {
+        padding-top: 3em;
+        padding-bottom: 3em;
+        max-width: 40em !important;
+    }
+
+    &__title {
+
+    }
+
+    &__text {
+        text-align: left;
+    }
 }
