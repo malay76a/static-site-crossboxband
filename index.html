@@ -3,28 +3,42 @@ layout: default
 title: Кроссфит Челябинск | Crossbox Band
 ---
 
-<!--begin фон для первого блока-->
+
 <div class="hero">
-  <video width="320" height="240" loop muted autoplay poster="images/">
+  <div class="hero__mask"></div>
+  <video class="hero__video" loop muted autoplay poster="images/">
     <source src="assets/video/promo_crossboxband.webm" type="video/webm">
     <source src="assets/video/promo_crossboxband.mp4" type="video/mp4">
     <source src="assets/video/promo_crossboxband.ogv" type="video/ogg">
     Your browser does not support the video tag.
   </video>
+  <div class="hero__container content">
+    <h2>Делаем Россию <b>СИЛЬНОЙ</b></h2>
+    <h3>присоединяйся к нашей команде</h3>
+    <button type="button">записаться</button>
+  </div>
 </div>
-<!--end фон для первого блока-->
+
+<div class="intro">
+  <div class="container intro__container">
+    <h1 class="intro__title">Добро пожаловать в Crossbox Band</h1>
+    <p class="intro__text">Только представьте:<br>
+Вы приходите в зал, в котором чувствуете себя как дома, светлое помещение с большими окнами, уютные раздевалки, в колонках играет ваша любимая музыка, новое качественное оборудование, приветливый персонал, профессиональные тренеры, удобное расписание, полезный бар, множество совместных уикендов и мероприятий...<br>
+Все это вас ждет в Crossbox Band!</p>
+  </div>
+</div>
 
 <!--begin тренировка дня-->
-<ul>
-  {% for post in site.posts %}
-  <li>
-    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+
+  {% for workout in site.categories.workout limit:1 %}
+
+    <a href="{{ site.baseurl }}{{ workout.url }}">{{ workout.title }}</a>
     <p>
-      {{ post.content }}
+      {{ workout.content }}
     </p>
-  </li>
+
   {% endfor %}
-</ul>
+<a href="/workout">архив тренировок</a>
 <!--end тренировка дня-->
 
 

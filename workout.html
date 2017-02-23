@@ -1,0 +1,16 @@
+---
+layout: default
+title: Архив кроссфит тренировок | Crossbox Band
+permalink: /workout/
+---
+
+<h3>Список всех тренировок</h3>
+
+{% for workout in site.categories.workout %}
+
+    <a href="{{ site.baseurl }}{{ workout.url }}">{{ workout.title }}</a>
+    <p>
+      {{ workout.content }}
+    </p>
+
+  {% endfor %}

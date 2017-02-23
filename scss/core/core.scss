@@ -1,18 +1,18 @@
 //Fonts
-$font-family: sans-serif;
+$font-family: 'Roboto', sans-serif;
 $line-height: 1.3;
 //Colors
 $font-color: #333333;
-$brand-color: #ffcd00;
+$brand-color: #b0cb1f;
 $additional-color: #005ea8;
 * {
     box-sizing: border-box;
 }
 
-html,
-body {
-    height: 100%;
-}
+// html,
+// body {
+//     height: 100%;
+// }
 
 html {
     font-size: 16px;
