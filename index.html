@@ -32,14 +32,20 @@ title: Кроссфит Челябинск | Crossbox Band
   <div class="workout__mask"></div>
   <div class="container workout__container">
     {% for workout in site.categories.workout limit:1 %}
-
     <a class="workout__title" href="{{ site.baseurl }}{{ workout.url }}"><h2>Тренировка</h2>{{ workout.date | date: "%d/%m/%Y" }}</a>
-    
       {{ workout.content }}
-    
-
     {% endfor %}
     <a class="workout__archive" href="/workout">архив тренировок</a>
+  </div>
+</div>
+
+<div class="schedule">
+  <div class="container schedule__container">
+    <h2 class="schedule__title">Расписание</h2>
+    <div class="schedule__table schedule-table">
+
+    </div>
+    <div class="schedule__disclaimer"></div>
   </div>
 </div>
 
